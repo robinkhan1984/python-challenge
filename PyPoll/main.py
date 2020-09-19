@@ -29,15 +29,16 @@ with open(electiondata, 'r') as csvfile:
 
 countofvotes = len(voterid)
 winner = max(numberofvotes.values())
-for key, value in numberofvotes.items():   
+for name, value in numberofvotes.items():   
     if value == winner: 
-        show_name = key
+        show_name = name
         
 
 percent = ''
 for x in candidate:
-    percent += f"{x}: {numberofvotes[x]/((countofvotes))*100:.2f}% "next
+    percent += f"{x}: {numberofvotes[x]/((countofvotes))*100:.2f}%\n"
 
+file = os.path.join("Analysis","PyPoll_Results.txt")
 
 mult = ''' print '''
 output = (f'''
@@ -45,14 +46,17 @@ Election Results
 -------------------------
 Total Votes: {countofvotes}
 -------------------------
-{politician}: {percent}% 
--------------------------
+{politician}: {percent}-------------------------
 Winner: {show_name}
 -------------------------
 
 ''')
+
 print(output)
 
+with open(file, 'w') as text:
+    text.writelines(output
+)
   
 
 
