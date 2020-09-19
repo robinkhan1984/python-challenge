@@ -31,13 +31,12 @@ countofvotes = len(voterid)
 winner = max(numberofvotes.values())
 for key, value in numberofvotes.items():   
     if value == winner: 
-        most_votes = key
-        break
-print(most_votes)
+        show_name = key
+        
+
 percent = ''
 for x in candidate:
-    percent += f"{x}: {numberofvotes[x]/((countofvotes))*100}% "
-
+    percent += f"{x}: {numberofvotes[x]/((countofvotes))*100:.2f}% "
 
 
 mult = ''' print '''
@@ -46,68 +45,16 @@ Election Results
 -------------------------
 Total Votes: {countofvotes}
 -------------------------
-{politician}: {percent}% ({numberofvotes})
+{politician}: {percent}% 
 -------------------------
-Winner: {winner}
+Winner: {show_name}
 -------------------------
 
 ''')
 print(output)
 
-    # results += f"{x}: {x, numberofvotes[x], (numberofvotes[x]/(len(voterid)))*100)
-                
+  
 
-
-
-
-
-
-
-
-
-
-
-# The total number of votes cast
-print(len(voterid)) 
-
-# for x in candidate
-#     print
-
-#     data = list(csvreader)
-#     votes = len(data)
-#     # votes = len(list(csvreader))
-#     print("Election Results")
-#     print("-------------------------")
-#     print(f"Total Votes: {votes}")
-#     print("-------------------------")
-
-# #    A complete list of candidates who received votes
-#     # sum = 0
-#     # for row in data: 
-#     #     Candidate = str(names[2])
-#     #     Candidate = Candidate + 1
-#     # print(Candidate)
-
-#     dict = {}
-#     for elem in data:
-#         if elem[2] not in dict:
-#           dict[elem[2]] = 0
-#         dict[elem[2]] = dict[elem[2]] + 1
-    
-#     final_list = [{'num' : elem, 'count': dict[elem]} for elem in dict]
-#     print(elem)
-
-
-
-# #    The percentage of votes each candidate won
-
-
-
-
-
-# #    The total number of votes each candidate won
-
-# #    The winner of the election based on popular vote.
 
 
 
