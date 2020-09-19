@@ -25,9 +25,36 @@ with open(electiondata, 'r') as csvfile:
             numberofvotes[politician] = 1
         else:
             numberofvotes[politician] = numberofvotes[politician] + 1
-print(len(voterid)) 
+
+
+countofvotes = len(voterid)
+winner = max(numberofvotes.values())
+for key, value in numberofvotes.items():   
+    if value == winner: 
+        most_votes = key
+        break
+print(most_votes)
+percent = ''
 for x in candidate:
-    print(x, numberofvotes[x], (numberofvotes[x]/(len(voterid)))*100)
+    percent += f"{x}: {numberofvotes[x]/((countofvotes))*100}% "
+
+
+
+mult = ''' print '''
+output = (f'''
+Election Results
+-------------------------
+Total Votes: {countofvotes}
+-------------------------
+{politician}: {percent}% ({numberofvotes})
+-------------------------
+Winner: {winner}
+-------------------------
+
+''')
+print(output)
+
+    # results += f"{x}: {x, numberofvotes[x], (numberofvotes[x]/(len(voterid)))*100)
                 
 
 
