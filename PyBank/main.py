@@ -42,29 +42,37 @@ revenue = sum(profitloss)
 # The greatest decrease in losses (date and amount) over the entire period
 
 
-print('Financial Analysis')
-print('----------------------------')
-print(f"Total Months: {months}")
-print(f"Total: ${revenue}")
-print(f"Average  Change: ${ageragechangerounded}")
-print(f"Greatest Increase in Profits: {date[indexofmaxincrease+1]} {maxincrease}")
-print(f"Greatest Decrease in Profits: {date[indexofmaxdecrease+1]} {maxdecrease}")
+
+# file = os.path.join("Analysis/PyBank_Results.txt")
+
+# with open(file, 'w') as text:
+#     text.write(
+
+mult = ''' print '''
+print(f'''
+Financial Analysis
+----------------------------
+Total Months: {months}
+Total: ${revenue}
+Average  Change: ${ageragechangerounded}
+Greatest Increase in Profits: {date[indexofmaxincrease+1]} {maxincrease}
+Greatest Decrease in Profits: {date[indexofmaxdecrease+1]} {maxdecrease}
+''')
 
 
 
+# file = os.path.join("Analysis/PyBank_Results.txt")
 
-file = os.path.join("Analysis/PyBank_Results.txt")
+# with open(file, 'w') as text:
+#     text.write(
+#         print('Financial Analysis'),
+#         print('----------------------------'),
+#         print(f"Total Months: {months}"),
+#         print(f"Total: ${revenue}"),
+#         print(f"Average  Change: ${ageragechangerounded}"),
+#         print(f"Greatest Increase in Profits: {date[indexofmaxincrease+1]} {maxincrease}"),
+#         print(f"Greatest Decrease in Profits: {date[indexofmaxdecrease+1]} {maxdecrease}"),
 
-with open(file, 'w') as text:
-    text.write(
-        print('Financial Analysis'),
-        print('----------------------------'),
-        print(f"Total Months: {months}"),
-        print(f"Total: ${revenue}"),
-        print(f"Average  Change: ${ageragechangerounded}"),
-        print(f"Greatest Increase in Profits: {date[indexofmaxincrease+1]} {maxincrease}"),
-        print(f"Greatest Decrease in Profits: {date[indexofmaxdecrease+1]} {maxdecrease}"),
-
-)
-    text.close
+# )
+#     text.close
 
