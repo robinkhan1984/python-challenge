@@ -36,7 +36,7 @@ for key, value in numberofvotes.items():
 
 percent = ''
 for x in candidate:
-    percent += f"{x}: {numberofvotes[x]/((countofvotes))*100:.2f}% "
+    percent += f"{x}: {numberofvotes[x]/((countofvotes))*100:.2f}% "next
 
 
 mult = ''' print '''
