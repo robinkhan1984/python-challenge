@@ -48,8 +48,12 @@ revenue = sum(profitloss)
 # with open(file, 'w') as text:
 #     text.write(
 
+
+
+file = os.path.join("Analysis","PyBank_Results.txt")
+
 mult = ''' print '''
-print(f'''
+output = (f'''
 Financial Analysis
 ----------------------------
 Total Months: {months}
@@ -57,22 +61,15 @@ Total: ${revenue}
 Average  Change: ${ageragechangerounded}
 Greatest Increase in Profits: {date[indexofmaxincrease+1]} {maxincrease}
 Greatest Decrease in Profits: {date[indexofmaxdecrease+1]} {maxdecrease}
-''')
 
+''')
+print(output)
 
 
 # file = os.path.join("Analysis/PyBank_Results.txt")
 
-# with open(file, 'w') as text:
-#     text.write(
-#         print('Financial Analysis'),
-#         print('----------------------------'),
-#         print(f"Total Months: {months}"),
-#         print(f"Total: ${revenue}"),
-#         print(f"Average  Change: ${ageragechangerounded}"),
-#         print(f"Greatest Increase in Profits: {date[indexofmaxincrease+1]} {maxincrease}"),
-#         print(f"Greatest Decrease in Profits: {date[indexofmaxdecrease+1]} {maxdecrease}"),
+with open(file, 'w') as text:
+    text.writelines(output
+)
 
-# )
-#     text.close
 
